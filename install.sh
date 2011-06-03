@@ -16,3 +16,4 @@ fi
 
 ln -s ${DOTFILES_PATH}/gitconfig ${HOME}/.gitconfig
 ln -s ${DOTFILES_PATH}/screenrc ${HOME}/.screenrc
+git config --global core.excludesfile ${DOTFILES_PATH}/gitignore

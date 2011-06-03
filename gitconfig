@@ -15,3 +15,5 @@
     unstage   = reset HEAD
 [branch]
     autosetupmerge = true
+[core]
+	excludesfile = /Users/mwhooker/dev/dotfiles/gitignore
