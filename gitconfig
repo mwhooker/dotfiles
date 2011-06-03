@@ -1,0 +1,17 @@
+[user]
+    name = Matthew Hooker
+    email = mwhooker@gmail.om
+[color]
+    branch = auto
+    diff   = auto
+    status = auto
+    interactive = auto
+[alias]
+    st        = status
+    co        = checkout
+    br        = branch
+    lg        = log --pretty=oneline --graph
+    logfull   = log --pretty=fuller --graph --stat -p
+    unstage   = reset HEAD
+[branch]
+    autosetupmerge = true
