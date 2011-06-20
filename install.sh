@@ -20,5 +20,5 @@ fi
 
 ln -s ${DOTFILES_PATH}/gitconfig ${HOME}/.gitconfig
 ln -s ${DOTFILES_PATH}/screenrc ${HOME}/.screenrc
-ln -s ${DOTFILES_PATH}/config ${HOME}/.ssh/config
+ln -s ${DOTFILES_PATH}/sshconfig ${HOME}/.ssh/config
 git config --global core.excludesfile ${DOTFILES_PATH}/gitignore
