@@ -14,6 +14,11 @@ if [ -L ~/.gitconfig ]; then
     unlink ~/.gitconfig
 fi
 
+if [ -L ~/.ssh/config ]; then
+    unlink ~/.ssh/config
+fi
+
 ln -s ${DOTFILES_PATH}/gitconfig ${HOME}/.gitconfig
 ln -s ${DOTFILES_PATH}/screenrc ${HOME}/.screenrc
+ln -s ${DOTFILES_PATH}/config ${HOME}/.ssh/config
 git config --global core.excludesfile ${DOTFILES_PATH}/gitignore

@@ -1,0 +1,12 @@
+Host github.com
+    User git
+    IdentityFile ~/.ssh/id_personal
+Host gambino
+    HostName gambino.dreamhost.com
+    IdentityFile ~/.ssh/id_personal
+    User mhooker
+Host viper
+    HostName v007.me
+    User mwhooker
+    IdentityFile ~/.ssh/id_personal
+    Port 53
