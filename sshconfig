@@ -10,3 +10,7 @@ Host viper
     User mwhooker
     IdentityFile ~/.ssh/id_personal
     Port 53
+Host no.de
+    Hostname 72.2.127.241
+    IdentityFile ~/.ssh/id_personal
+    User node
