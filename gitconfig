@@ -10,6 +10,7 @@
     st        = status
     co        = checkout
     br        = branch
+    ru        = remote update
     lg        = log --pretty=oneline --graph
     logfull   = log --pretty=fuller --graph --stat -p
     unstage   = reset HEAD
@@ -17,3 +18,5 @@
     autosetupmerge = true
 [core]
 	excludesfile = /Users/mwhooker/dev/dotfiles/gitignore
+[help]
+	autocorrect = 1
