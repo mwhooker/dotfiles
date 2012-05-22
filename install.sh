@@ -22,8 +22,13 @@ if [ -L ~/.tmux.conf ]; then
     unlink ~/.tmux.conf
 fi
 
+if [ -L ~/.inputrc ]; then
+    unlink ~/.inputrc
+fi
+
 ln -s ${DOTFILES_PATH}/gitconfig ${HOME}/.gitconfig
 ln -s ${DOTFILES_PATH}/screenrc ${HOME}/.screenrc
 ln -s ${DOTFILES_PATH}/sshconfig ${HOME}/.ssh/config
 ln -s ${DOTFILES_PATH}/tmux.conf ${HOME}/.tmux.conf
+ln -s ${DOTFILES_PATH}/inputrc ${HOME}/.inputrc
 git config --global core.excludesfile ${DOTFILES_PATH}/gitignore
