@@ -11,7 +11,7 @@
     co        = checkout
     br        = branch
     ru        = remote update
-    lg        = log --pretty=oneline --graph
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     logfull   = log --pretty=fuller --graph --stat -p
     unstage   = reset HEAD
 [branch]
