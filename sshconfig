@@ -14,3 +14,9 @@ Host no.de
     Hostname 72.2.127.241
     IdentityFile ~/.ssh/id_personal
     User node
+Host aws
+    HostName *.amazonaws.com
+    IdentityFile ~/.ssh/mhooker-aws.pem
+host heat
+    HostName heat.dreamhost.com
+    User pvn_jukebox
