@@ -37,3 +37,4 @@ Thumbs.db
 # vim files
 *.sw*
 *~
+.DS_Store

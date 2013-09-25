@@ -20,3 +20,5 @@ Host aws
 host heat
     HostName heat.dreamhost.com
     User pvn_jukebox
+Host *
+    ForwardAgent yes

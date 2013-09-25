@@ -20,3 +20,8 @@
 	excludesfile = /Users/mwhooker/dev/dotfiles/gitignore
 [help]
 	autocorrect = 1
+
+[url "git@github.com:"]
+    insteadOf = gh:
+[push]
+	default = simple
