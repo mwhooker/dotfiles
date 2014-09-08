@@ -1,4 +1,5 @@
 #!/bin/bash
+# Rule 1. must be idempotent
 
 if [ "`echo $0 | cut -c1`" = "/" ]; then
     DOTFILES_PATH=`dirname $0`
@@ -32,3 +33,8 @@ ln -s ${DOTFILES_PATH}/sshconfig ${HOME}/.ssh/config
 ln -s ${DOTFILES_PATH}/tmux.conf ${HOME}/.tmux.conf
 ln -s ${DOTFILES_PATH}/inputrc ${HOME}/.inputrc
 git config --global core.excludesfile ${DOTFILES_PATH}/gitignore
+
+cat > ${HOME}/.zshrc <<eom
+ZSH_CUSTOM=${DOTFILES_PATH}/zsh/custom
+source ${DOTFILES_PATH}/zsh/zshrc.zsh
+eom
