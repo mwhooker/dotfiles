@@ -89,6 +89,8 @@ export TZ="America/Los_Angeles"
 export ENABLE_CORRECTION=true
 export VIM_CRONTAB=true
 
+set -o vi
+
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 
