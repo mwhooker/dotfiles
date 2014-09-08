@@ -1,0 +1,2 @@
+export CHEF_USER="mwhooker"
+export COOKBOOKS="$HOME/.chef/cookbooks"
