@@ -57,8 +57,6 @@ unsetopt ALL_EXPORT
 
 # User configuration
 
-export GOPATH=$HOME/.go
-export GOROOT=/usr/local/go
 export PATH=$GOPATH/bin:$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:$PATH
 
 export HISTFILE=$HOME/.zhistory
@@ -89,12 +87,14 @@ export TZ="America/Los_Angeles"
 export ENABLE_CORRECTION=true
 export VIM_CRONTAB=true
 
-set -o vi
 
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 
-
-# Would you like to use another custom folder than $ZSH/custom?
-
 source $ZSH/oh-my-zsh.sh
+set -o vi
+
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent identities id_wercker
+
+source "$HOME/dev/dotfiles/zsh/wercker_aws"
