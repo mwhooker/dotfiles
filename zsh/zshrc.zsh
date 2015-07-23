@@ -51,7 +51,7 @@ setopt SHARE_HISTORY
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler systemadmin go history last-working-dir lein ssh-agent urltools colored-man git virtualenv rbenv glide awshelper)
+plugins=(bundler systemadmin go history last-working-dir lein ssh-agent urltools colored-man git virtualenv rbenv glide awshelper mwhooker)
 
 unsetopt ALL_EXPORT
 
