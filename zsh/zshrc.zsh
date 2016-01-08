@@ -57,6 +57,9 @@ unsetopt ALL_EXPORT
 
 # User configuration
 
+export GOPATH=$HOME/dev
+export GO15VENDOREXPERIMENT=1
+
 export PATH=$GOPATH/bin:$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:$PATH
 
 export HISTFILE=$HOME/.zhistory
