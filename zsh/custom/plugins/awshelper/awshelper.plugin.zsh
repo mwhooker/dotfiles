@@ -7,8 +7,8 @@ function ec2ssh() {
     fi
     shift
     if [[ $# > 0 ]]; then
-        ssh -n core@${dns} $@
+        ssh -A -n core@${dns} $@
     else
-        ssh core@${dns} $@
+        ssh -A core@${dns} $@
     fi
 }
