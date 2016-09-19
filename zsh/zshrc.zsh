@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/dev/oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -98,9 +98,9 @@ source $ZSH/oh-my-zsh.sh
 set -o vi
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_wercker
+zstyle :omz:plugins:ssh-agent identities id_rsa
 
 source "${0:A:h:h}/z/z.sh"
-source "${0:a:h}/wercker"
+source "${0:a:h}/hashicorp"
 
 autoload -U zmv

@@ -34,6 +34,9 @@ ln -s ${DOTFILES_PATH}/tmux.conf ${HOME}/.tmux.conf
 ln -s ${DOTFILES_PATH}/inputrc ${HOME}/.inputrc
 git config --global core.excludesfile ${DOTFILES_PATH}/gitignore
 
+defaults write -g KeyRepeat -int 2
+defaults write -g InitialKeyRepeat -int 10
+
 cat > ${HOME}/.zshrc <<eom
 ZSH_CUSTOM=${DOTFILES_PATH}/zsh/custom
 source ${DOTFILES_PATH}/zsh/zshrc.zsh
