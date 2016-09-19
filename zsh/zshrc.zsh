@@ -57,7 +57,7 @@ unsetopt ALL_EXPORT
 
 # User configuration
 
-export GOPATH=$HOME/dev
+export GOPATH=$HOME/go
 export GO15VENDOREXPERIMENT=1
 
 export PATH=$GOPATH/bin:$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:$PATH
