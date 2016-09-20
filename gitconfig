@@ -1,28 +1,28 @@
 [user]
-    name = Matthew Hooker
-    email = mwhooker@gmail.com
+	name = Matthew Hooker
+	email = mwhooker@gmail.com
 [color]
-    branch = auto
-    diff   = auto
-    status = auto
-    interactive = auto
+	branch = auto
+	diff   = auto
+	status = auto
+	interactive = auto
 [alias]
-    st        = status
-    co        = checkout
-    br        = branch
-    ru        = remote update
+	st		= status
+	co		= checkout
+	br		= branch
+	ru		= remote update
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    logfull   = log --pretty=fuller --graph --stat -p
-    unstage   = reset HEAD
+	logfull   = log --pretty=fuller --graph --stat -p
+	unstage   = reset HEAD
 [branch]
-    autosetupmerge = true
+	autosetupmerge = true
 [core]
 	excludesfile = /Users/mwhooker/dev/dotfiles/gitignore
+    pager = less -i
 [help]
 	autocorrect = 1
-
 [url "git@github.com:"]
-    insteadOf = gh:
+	insteadOf = gh:
 [push]
 	default = simple
 [filter "media"]
