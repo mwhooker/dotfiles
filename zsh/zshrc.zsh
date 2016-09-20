@@ -103,4 +103,6 @@ zstyle :omz:plugins:ssh-agent identities id_rsa
 source "${0:A:h:h}/z/z.sh"
 source "${0:a:h}/hashicorp"
 
+export LESS="-Ri"
+
 autoload -U zmv
