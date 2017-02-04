@@ -60,13 +60,12 @@ unsetopt ALL_EXPORT
 export GOPATH=$HOME/go
 export GO15VENDOREXPERIMENT=1
 
-export PATH=$GOPATH/bin:$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.rbenv/bin:$HOME/bin
 
 export HISTFILE=$HOME/.zhistory
 
 export EDITOR=vim
 
-export PATH="/sbin:/usr/sbin:${PATH}"
 
 if [ -f "${HOME}/Library/Haskell/bin" ]; then
     export PATH="${PATH}:${HOME}/Library/Haskell/bin"
