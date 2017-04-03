@@ -23,7 +23,7 @@
 	autosetupmerge = true
 [core]
 	excludesfile = /Users/mwhooker/dev/dotfiles/gitignore
-    pager = less -i
+    pager = "/Users/mwhooker/bin/gitless.sh"
 [help]
 	autocorrect = 1
 [url "git@github.com:"]
@@ -35,3 +35,5 @@
 	smudge = git-media-smudge %f
 [credential]
 	helper = osxkeychain
+[rerere]
+	enabled = true

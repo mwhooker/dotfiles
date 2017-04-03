@@ -37,7 +37,8 @@ ZSH_THEME="muse"
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 export HIST_STAMPS="mm/dd/yyyy"
-export SAVEHIST=1000000
+export HISTSIZE=1000000
+export SAVEHIST=$HISTSIZE
 setopt APPEND_HISTORY
 setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
