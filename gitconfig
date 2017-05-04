@@ -1,39 +1,41 @@
 [user]
-	name = Matthew Hooker
-	email = mwhooker@gmail.com
+    name = Matthew Hooker
+    email = mwhooker@gmail.com
 [color]
-	branch = auto
-	diff   = auto
-	status = auto
-	interactive = auto
+    branch = auto
+    diff   = auto
+    status = auto
+    interactive = auto
 [alias]
-	st		= status
-	co		= checkout
-	br		= branch
-	ru		= remote update
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	logfull   = log --pretty=fuller --graph --stat -p
-	unstage   = reset HEAD
+    st      = status
+    co      = checkout
+    br      = branch
+    ru      = remote update
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    logfull   = log --pretty=fuller --graph --stat -p
+    unstage   = reset HEAD
 # for github remotes
-	pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-	pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+    pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+    pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 # for bitbucket/stash remotes
-	spr  = "!f() { git fetch -fu ${2:-origin} refs/pull-requests/$1/from:pr/$1 && git checkout pr/$1; }; f"
+    spr  = "!f() { git fetch -fu ${2:-origin} refs/pull-requests/$1/from:pr/$1 && git checkout pr/$1; }; f"
 [branch]
-	autosetupmerge = true
+    autosetupmerge = true
 [core]
-	excludesfile = /Users/mwhooker/dev/dotfiles/gitignore
+    excludesfile = /Users/mwhooker/dev/dotfiles/gitignore
     pager = "/Users/mwhooker/bin/gitless.sh"
 [help]
-	autocorrect = 1
+    autocorrect = 1
 [url "git@github.com:"]
-	insteadOf = gh:
+    insteadOf = gh:
 [push]
-	default = simple
+    default = simple
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [rerere]
-	enabled = true
+    enabled = true
+[include]
+    path = /Users/mwhooker/dev/dotfiles/private_gitconfig
