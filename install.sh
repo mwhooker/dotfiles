@@ -7,7 +7,7 @@ else
     DOTFILES_PATH=$(dirname `pwd`/`echo $0 | cut -c3-`)
 fi
 
-if [ - ${GITHUB_TOKEN} ]; then
+if [ -z ${GITHUB_TOKEN} ]; then
     echo "make sure you have a github token set."
     exit 1
 fi
