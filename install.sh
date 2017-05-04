@@ -7,6 +7,11 @@ else
     DOTFILES_PATH=$(dirname `pwd`/`echo $0 | cut -c3-`)
 fi
 
+if [ - ${GITHUB_TOKEN} ]; then
+    echo "make sure you have a github token set."
+    exit 1
+fi
+
 if [ -L ~/.screenrc ]; then
     unlink ~/.screenrc
 fi
@@ -41,3 +46,5 @@ cat > ${HOME}/.zshrc <<eom
 ZSH_CUSTOM=${DOTFILES_PATH}/zsh/custom
 source ${DOTFILES_PATH}/zsh/zshrc.zsh
 eom
+
+echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > ~/.git-credentials
