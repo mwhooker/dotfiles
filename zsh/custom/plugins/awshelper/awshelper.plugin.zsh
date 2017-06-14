@@ -1,3 +1,4 @@
+## TODO: add scp support
 
 
 function ec2ssh() {
