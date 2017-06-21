@@ -4,13 +4,14 @@
 function ec2ssh() {
     AWS=/usr/local/bin/aws
     set -x
-    dns=$($AWS ec2 describe-instances --output text --instance-id $1 --query "Reservations[0].Instances[0].PublicDnsName")
+    instanceID=$1
+    dns=$($AWS ec2 describe-instances --output text --instance-id $instanceID --query "Reservations[0].Instances[0].PublicDnsName")
     if [ $? -ne 0 ]; then
-        dns=$($AWS ec2 describe-instances --region us-west-1 --output text --instance-id $1 --query "Reservations[0].Instances[0].PublicDnsName")
+        dns=$($AWS ec2 describe-instances --output text --instance-id $instanceID --query "Reservations[0].Instances[0].PublicDnsName")
     fi
     shift
 
-    imageName=$(aws ec2 describe-images --output text --image-id $(aws ec2 describe-instances --output text --query "Reservations[0].Instances[0].ImageId") --query "Images[0].Name")
+    imageName=$(aws ec2 describe-images --output text --image-id $(aws ec2 describe-instances --instance-id ${instanceID} --output text --query "Reservations[0].Instances[0].ImageId") --query "Images[0].Name")
 
 
     # ami-b15905a7 - CoreOS-alpha-1437.0.0-hvm
