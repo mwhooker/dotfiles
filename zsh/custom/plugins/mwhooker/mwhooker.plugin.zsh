@@ -12,3 +12,5 @@ function gocode() {
     pick
   )}
 }
+
+alias lsd="ls -ld -- */"
