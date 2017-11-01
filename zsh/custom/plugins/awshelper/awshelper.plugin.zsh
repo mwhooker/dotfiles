@@ -3,7 +3,6 @@
 
 function ec2ssh() {
     AWS=/usr/local/bin/aws
-    set -x
     instanceID=$1
     dns=$($AWS ec2 describe-instances --output text --instance-id $instanceID --query "Reservations[0].Instances[0].PublicDnsName")
     if [ $? -ne 0 ]; then
