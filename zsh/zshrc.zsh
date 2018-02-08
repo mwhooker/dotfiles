@@ -52,7 +52,27 @@ setopt SHARE_HISTORY
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler systemadmin go history last-working-dir lein ssh-agent urltools colored-man git virtualenv rbenv glide awshelper mwhooker gpg-agent aws)
+plugins=(
+    aws
+    awshelper
+    bundler
+    colored-man
+    git
+    glide
+    go
+    gpg-agent
+    history
+    last-working-dir
+    lein
+    mwhooker
+    osx
+    rbenv
+    ssh-agent
+    systemadmin
+    urltools
+    virtualenv
+    z
+)
 
 unsetopt ALL_EXPORT
 
@@ -100,7 +120,6 @@ set -o vi
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities id_rsa
 
-source "${0:A:h:h}/z/z.sh"
 source "${0:a:h}/hashicorp"
 
 export LESS="-Ri"
