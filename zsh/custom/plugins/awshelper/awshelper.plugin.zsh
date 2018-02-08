@@ -1,14 +1,13 @@
 ## TODO: add scp support
 
 
-function ec2ssh() {
+function ec2conn() {
     AWS=/usr/local/bin/aws
     instanceID=$1
     dns=$($AWS ec2 describe-instances --output text --instance-id $instanceID --query "Reservations[0].Instances[0].PublicDnsName")
     if [ $? -ne 0 ]; then
         dns=$($AWS ec2 describe-instances --output text --instance-id $instanceID --query "Reservations[0].Instances[0].PublicDnsName")
     fi
-    shift
 
     imageName=$(aws ec2 describe-images --output text --image-id $(aws ec2 describe-instances --instance-id ${instanceID} --output text --query "Reservations[0].Instances[0].ImageId") --query "Images[0].Name")
 
@@ -25,10 +24,26 @@ function ec2ssh() {
         fi
     done
 
+    if [ -z "$user" ]; then
+        echo "unable to detect username."
+        return 1
+    fi
 
+    echo "${user}@${dns}"
+    return 0
+}
+
+
+function ec2ssh() {
+    host=$(ec2conn $1)
+    if [ $? -ne 0 ]; then
+        echo $host
+        return $?
+    fi
+    shift
     if [[ $# > 0 ]]; then
-        ssh -A -n ${user}@${dns} $@
+        ssh -A -n ${host} $@
     else
-        ssh -A ${user}@${dns} $@
+        ssh -A ${host} $@
     fi
 }
