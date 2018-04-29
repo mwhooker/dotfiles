@@ -37,7 +37,7 @@ ZSH_THEME="muse"
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 export HIST_STAMPS="mm/dd/yyyy"
-export HISTSIZE=1000000
+export HISTSIZE=10000000
 export SAVEHIST=$HISTSIZE
 setopt APPEND_HISTORY
 setopt EXTENDED_HISTORY
@@ -81,7 +81,7 @@ unsetopt ALL_EXPORT
 export GOPATH=$HOME/go
 export GO15VENDOREXPERIMENT=1
 
-export PATH=/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.rbenv/bin:$HOME/bin
+export PATH=/sbin:/usr/sbin:$GOPATH/bin:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rbenv/bin:$HOME/bin
 
 export HISTFILE=$HOME/.zhistory
 
