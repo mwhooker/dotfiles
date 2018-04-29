@@ -14,3 +14,6 @@ function gocode() {
 }
 
 alias lsd="ls -ld -- */"
+
+alias goversion="gdb -q -ex \"p 'runtime.buildVersion'\" -ex quit"
+alias iscgo="gdb -q -ex \"p 'runtime.iscgo'\" -ex quit"
