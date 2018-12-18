@@ -17,3 +17,9 @@ alias lsd="ls -ld -- */"
 
 alias goversion="gdb -q -ex \"p 'runtime.buildVersion'\" -ex quit"
 alias iscgo="gdb -q -ex \"p 'runtime.iscgo'\" -ex quit"
+alias tf=terraform
+alias wakedogfish="wakeonlan f0:79:59:6d:78:ee"
+alias docker-gc="docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
+# docker system prune -a
+
+export VIMRC=$HOME/dev/vimrc
