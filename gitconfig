@@ -1,4 +1,4 @@
-# vim: set syntax=git-config:
+# vim: syntax=git-config
 [user]
     name = Matthew Hooker
     email = mwhooker@gmail.com
