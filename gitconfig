@@ -43,3 +43,5 @@
     insteadOf = git://github.com
 [http]
 	cookiefile = /Users/mwhooker/.gitcookies
+[gpg]
+	program = /usr/local/bin/gpg
