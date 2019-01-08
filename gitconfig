@@ -1,3 +1,4 @@
+; vim: set ft=.gitconfig
 [user]
     name = Matthew Hooker
     email = mwhooker@gmail.com
@@ -11,16 +12,16 @@
     co      = checkout
     br      = branch
     ru      = remote update
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    logfull   = log --pretty=fuller --graph --stat -p
-    unstage   = reset HEAD
+    lg      = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    logfull = log --pretty=fuller --graph --stat -p
+    unstage = reset HEAD
 # for github remotes
-    pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-    pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+    pr          = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+    pr-clean    = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 # for bitbucket/stash remotes
     spr  = "!f() { git fetch -fu ${2:-origin} refs/pull-requests/$1/from:pr/$1 && git checkout pr/$1; }; f"
-    find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
-    show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
+    find-merge  = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
+    show-merge  = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
 [branch]
     autosetupmerge = true
 [core]
@@ -42,6 +43,6 @@
 [url "https://github.com"]
     insteadOf = git://github.com
 [http]
-	cookiefile = /Users/mwhooker/.gitcookies
+    cookiefile = /Users/mwhooker/.gitcookies
 [gpg]
-	program = /usr/local/bin/gpg
+    program = /usr/local/bin/gpg
