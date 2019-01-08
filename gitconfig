@@ -8,9 +8,10 @@ vim: syntax=.gitconfig
 #vim: set syntax=git-config:
 #vim: set syntax=gitconfig:
 #vim: set syntax=.gitconfig:
-#vim: set ft=git-config:
-#vim: set ft=gitconfig:
-#vim: set ft=.gitconfig:
+# vim: set ft=git-config:
+# vim: set ft=gitconfig:
+# vim: set ft=.gitconfig:
+# vim: set ft=ini:
 [user]
     name = Matthew Hooker
     email = mwhooker@gmail.com
