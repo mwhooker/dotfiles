@@ -4,7 +4,7 @@ function myip() {
 }
 
 # thx @justincampbell
-function gocode() {
+function gotocode() {
   cd $GOPATH/src/${1:-$(
   find $GOPATH/src -type d -maxdepth 3 | \
     grep "src/.*/.*/.*$" | \
@@ -20,6 +20,8 @@ alias iscgo="gdb -q -ex \"p 'runtime.iscgo'\" -ex quit"
 alias tf=terraform
 alias wakedogfish="wakeonlan f0:79:59:6d:78:ee"
 alias docker-gc="docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
+alias go="nocorrect go"
+alias vim="nocorrect vim"
 # docker system prune -a
 
 export VIMRC=$HOME/dev/vimrc

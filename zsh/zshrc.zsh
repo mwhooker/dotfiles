@@ -86,9 +86,10 @@ export HISTFILE=$HOME/.zhistory
 
 export EDITOR=vim
 
+PYSITE="$(python -m site --user-base)/bin"
 
 if [ -f "${HOME}/Library/Haskell/bin" ]; then
-    export PATH="${PATH}:${HOME}/Library/Haskell/bin"
+    export PATH="${PATH}:${HOME}/Library/Haskell/bin:${PYSITE}"
 fi
 
 # fix ssh sign useing the key
