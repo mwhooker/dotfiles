@@ -58,7 +58,6 @@ plugins=(
     bundler
     colored-man
     git
-    glide
     go
     gpg-agent
     history
