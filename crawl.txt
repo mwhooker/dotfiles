@@ -1,0 +1,33 @@
+##### Crawl Init file ###############################################
+# For descriptions of all options, as well as some more in-depth information
+# on setting them, consult the file
+#    options_guide.txt
+# in your /docs directory. If you can't find it, the file is also available
+# online at:
+# https://github.com/crawl/crawl/blob/master/crawl-ref/docs/options_guide.txt
+
+restart_after_game = true
+default_manual_training = true
+default_show_all_skills = false
+level_map_cursor_step = 7
+confirm_butcher        = never
+easy_eat_chunks        = true
+auto_eat_chunks        = true
+auto_drop_chunks       = rotten
+hp_colour = 70:yellow, 50:red
+sort_menus = inv: true : equipped, identified, basename, qualname, charged
+note_monsters += orb of fire, neqoxec, shining eye, cacodemon
+note_monsters += ancient lich, Sigmund
+autofight_stop = 50
+
+autoinscribe += bad_item.*potion:!q
+autoinscribe += potion.*mutation:!q
+
+ai := autoinscribe
+ai += of identify:@r1
+ai += remove curse:@r2
+ai += curing:@q1
+
+
+travel_avoid_terrain = shallow water, deep water
+travel_delay = -1
