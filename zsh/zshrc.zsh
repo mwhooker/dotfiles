@@ -58,7 +58,7 @@ plugins=(
     bundler
     colored-man
     git
-    go
+    golang
     gpg-agent
     history
     last-working-dir
@@ -105,18 +105,17 @@ export TZ="America/Los_Angeles"
 export ENABLE_CORRECTION=true
 export VIM_CRONTAB=true
 
-
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 
-source $ZSH/oh-my-zsh.sh
-set -o vi
-
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities id_rsa
+
+set -o vi
 
 source "${0:a:h}/hashicorp"
 
 export LESS="-Ri"
 
 autoload -U zmv
+source $ZSH/oh-my-zsh.sh
