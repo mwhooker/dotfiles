@@ -32,11 +32,17 @@ if [ -L ~/.inputrc ]; then
     unlink ~/.inputrc
 fi
 
+if [ -L ~/.crawl/init.txt ]; then
+    unlink ~/.inputrc
+fi
+
+mkdir -p ~/.crawl
 ln -s ${DOTFILES_PATH}/gitconfig ${HOME}/.gitconfig
 ln -s ${DOTFILES_PATH}/screenrc ${HOME}/.screenrc
 ln -s ${DOTFILES_PATH}/sshconfig ${HOME}/.ssh/config
 ln -s ${DOTFILES_PATH}/tmux.conf ${HOME}/.tmux.conf
 ln -s ${DOTFILES_PATH}/inputrc ${HOME}/.inputrc
+ln -s ${DOTFILES_PATH}/crawl.txt ${HOME}/.crawl/init.txt
 git config --global core.excludesfile ${DOTFILES_PATH}/gitignore
 
 defaults write -g KeyRepeat -int 2

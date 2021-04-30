@@ -22,6 +22,10 @@ alias wakedogfish="wakeonlan f0:79:59:6d:78:ee"
 alias docker-gc="docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
 alias go="nocorrect go"
 alias vim="nocorrect vim"
+alias tfplan="tf plan -out terraform.tfplan && tf show -json terraform.tfplan > tfplan.json"
+
+
 # docker system prune -a
 
 export VIMRC=$HOME/dev/vimrc
+export GO111MODULE="on"

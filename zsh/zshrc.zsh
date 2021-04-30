@@ -91,10 +91,6 @@ if [ -f "${HOME}/Library/Haskell/bin" ]; then
     export PATH="${PATH}:${HOME}/Library/Haskell/bin:${PYSITE}"
 fi
 
-# fix ssh sign useing the key
-# https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/201786
-export SSH_AUTH_SOCK=0
-
 #xcode 4 bullshit -
 #http://stackoverflow.com/questions/5944332/broken-pipe-error-when-using-pip-to-install-pycrypto-on-mac-os-x
 export ARCHFLAGS='-arch i386 -arch x86_64'

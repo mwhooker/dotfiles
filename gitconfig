@@ -49,3 +49,5 @@
     program = /usr/local/bin/gpg
 [github]
 	user = mwhooker@gmail.com
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/

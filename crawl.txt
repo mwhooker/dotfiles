@@ -6,19 +6,18 @@
 # online at:
 # https://github.com/crawl/crawl/blob/master/crawl-ref/docs/options_guide.txt
 
-restart_after_game = true
+autofight_caught = true
+autofight_stop = 50
 default_manual_training = true
 default_show_all_skills = false
-level_map_cursor_step = 7
-confirm_butcher        = never
-easy_eat_chunks        = true
-auto_eat_chunks        = true
-auto_drop_chunks       = rotten
 hp_colour = 70:yellow, 50:red
-sort_menus = inv: true : equipped, identified, basename, qualname, charged
-note_monsters += orb of fire, neqoxec, shining eye, cacodemon
+level_map_cursor_step = 7
 note_monsters += ancient lich, Sigmund
-autofight_stop = 50
+note_monsters += orb of fire, neqoxec, shining eye, cacodemon
+restart_after_game = true
+show_more = false
+sort_menus = inv: true : equipped, identified, basename, qualname, charged
+hp_warning = 25
 
 autoinscribe += bad_item.*potion:!q
 autoinscribe += potion.*mutation:!q
@@ -28,6 +27,50 @@ ai += of identify:@r1
 ai += remove curse:@r2
 ai += curing:@q1
 
-
-travel_avoid_terrain = shallow water, deep water
+travel_avoid_terrain = deep water
 travel_delay = -1
+
+# Chopping
+# Autoexplore butchers corpses at satiated or worse.
+auto_butcher = satiated
+# Don't prompt to butcher stuff.
+confirm_butcher = never
+# Eat the oldest safe chunk just by pressing 'e'.
+easy_eat_chunks = true
+# Automatically eat chunks while traveling.
+auto_eat_chunks = true
+auto_drop_chunks       = rotten
+
+# https://www.reddit.com/r/dcss/comments/4gtz2l/what_do_you_put_in_your_rc_file/d2ma0gk/?utm_source=reddit&utm_medium=web2x&context=3
+# font change (the default one is ugly)
+tile_font_crt_family  = Consolas
+tile_font_stat_family = Consolas
+tile_font_msg_family  = Consolas
+tile_font_lbl_family  = Consolas
+#
+# force "more" when these happen:
+# finished manual - normally doesn't prompt for a key press
+force_more_message += You have finished your manual of
+# distortion weapon hit you yielding a damage effect (other effects are more noticeable)
+force_more_message += Space bends around you
+
+# from advanced_optioneering.txt
+######################################################################
+# Add the following to your options file to automatically pick up
+# armour for non-body armour slots (gloves, boots, etc.), if you don't
+# already have an item equipped there.
+{
+add_autopickup_func(function(it, name)
+  if it.is_useless then
+    return
+  end
+  if it.class(true) == "armour" then
+    local good_slots = {cloak="Cloak", helmet="Helmet", gloves="Gloves",
+                        boots="Boots"}
+    st, _ = it.subtype()
+    if good_slots[st] ~= nil and items.equipped_at(good_slots[st]) == nil then
+      return true
+    end
+  end
+end)
+}
