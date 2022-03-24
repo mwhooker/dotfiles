@@ -64,7 +64,7 @@ plugins=(
     last-working-dir
     lein
     mwhooker
-    osx
+    macos
     rbenv
     ssh-agent
     systemadmin
@@ -111,11 +111,11 @@ bindkey -M vicmd '^r' history-incremental-search-backward
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities id_rsa
 
-set -o vi
-
 source "${0:a:h}/hashicorp"
 
 export LESS="-Ri"
 
 autoload -U zmv
 source $ZSH/oh-my-zsh.sh
+
+set -o vi
