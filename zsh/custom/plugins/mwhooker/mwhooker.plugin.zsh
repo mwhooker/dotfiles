@@ -28,4 +28,3 @@ alias tfplan="tf plan -out terraform.tfplan && tf show -json terraform.tfplan > 
 # docker system prune -a
 
 export VIMRC=$HOME/dev/vimrc
-export GO111MODULE="on"

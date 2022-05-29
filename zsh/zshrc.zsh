@@ -91,10 +91,6 @@ if [ -f "${HOME}/Library/Haskell/bin" ]; then
     export PATH="${PATH}:${HOME}/Library/Haskell/bin:${PYSITE}"
 fi
 
-#xcode 4 bullshit -
-#http://stackoverflow.com/questions/5944332/broken-pipe-error-when-using-pip-to-install-pycrypto-on-mac-os-x
-export ARCHFLAGS='-arch i386 -arch x86_64'
-
 export DISPLAY=:0
 export HOSTNAME="`hostname`"
 export LANG='en_US.UTF-8'
@@ -110,8 +106,6 @@ bindkey -M vicmd '^r' history-incremental-search-backward
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities id_rsa
-
-source "${0:a:h}/hashicorp"
 
 export LESS="-Ri"
 

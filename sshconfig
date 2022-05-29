@@ -1,25 +1,9 @@
 # vim: syntax=sshconfig
 Host github.com
     User git
-    IdentityFile ~/.ssh/id_personal
-Host gambino
-    HostName gambino.dreamhost.com
-    IdentityFile ~/.ssh/id_personal
-    User mhooker
-Host viper
-    HostName v007.me
-    User mwhooker
-    IdentityFile ~/.ssh/id_personal
-    Port 53
-Host no.de
-    Hostname 72.2.127.241
-    IdentityFile ~/.ssh/id_personal
-    User node
+    IdentityFile ~/.ssh/id_rsa
 Host aws
     HostName *.amazonaws.com
     IdentityFile ~/.ssh/mhooker-aws.pem
-host heat
-    HostName heat.dreamhost.com
-    User pvn_jukebox
 Host *
     ForwardAgent no

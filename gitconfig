@@ -42,8 +42,6 @@
     helper = store
 [rerere]
     enabled = true
-[url "https://github.com"]
-    insteadOf = git://github.com
 [http]
 	cookiefile = /Users/mwhooker/.gitcookies
 [gpg]
