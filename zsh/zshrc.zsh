@@ -56,7 +56,7 @@ plugins=(
     aws
     awshelper
     bundler
-    colored-man
+    colored-man-pages
     git
     golang
     gpg-agent
@@ -81,13 +81,13 @@ export GOPATH=$HOME/go
 
 export HOMEBREW=/opt/homebrew
 
-export PATH=/sbin:/usr/sbin:$GOPATH/bin:$HOMEBREW/bin/:$PATH:$HOME/.rbenv/bin:$HOME/bin
+export PATH=/sbin:/usr/sbin:$GOPATH/bin:$HOMEBREW/bin:$PATH:$HOME/.rbenv/bin:$HOME/bin
 
 export HISTFILE=$HOME/.zhistory
 
 export EDITOR=vim
 
-PYSITE="$(python -m site --user-base)/bin"
+PYSITE="$(python3 -m site --user-base)/bin"
 
 if [ -f "${HOME}/Library/Haskell/bin" ]; then
     export PATH="${PATH}:${HOME}/Library/Haskell/bin:${PYSITE}"
