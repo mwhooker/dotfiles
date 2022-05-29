@@ -27,7 +27,7 @@
 [branch]
     autosetupmerge = true
 [core]
-    excludesfile = /Users/mwhooker/dev/dotfiles/gitignore
+	excludesfile = /Users/mwhooker/dev/dotfiles/gitignore
     pager = "/Users/mwhooker/bin/gitless.sh"
 [help]
     autocorrect = 1

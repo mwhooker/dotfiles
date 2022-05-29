@@ -28,7 +28,7 @@ if [ -L ~/.inputrc ]; then
 fi
 
 if [ -L ~/.crawl/init.txt ]; then
-    unlink ~/.inputrc
+    unlink ~/.crawl/init.txt
 fi
 
 mkdir -p ~/.crawl
