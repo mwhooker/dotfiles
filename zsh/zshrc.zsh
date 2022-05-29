@@ -79,7 +79,9 @@ unsetopt ALL_EXPORT
 
 export GOPATH=$HOME/go
 
-export PATH=/sbin:/usr/sbin:$GOPATH/bin:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rbenv/bin:$HOME/bin
+export HOMEBREW=/opt/homebrew
+
+export PATH=/sbin:/usr/sbin:$GOPATH/bin:$HOMEBREW/bin/:$PATH:$HOME/.rbenv/bin:$HOME/bin
 
 export HISTFILE=$HOME/.zhistory
 
