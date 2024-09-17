@@ -1,7 +1,7 @@
 # vim: syntax=sshconfig
 Host github.com
     User git
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/id_ed25519
 Host aws
     HostName *.amazonaws.com
     IdentityFile ~/.ssh/mhooker-aws.pem
