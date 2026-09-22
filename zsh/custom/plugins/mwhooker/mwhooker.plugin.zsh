@@ -23,8 +23,6 @@ alias docker-gc="docker run --rm --privileged -v /var/run/docker.sock:/var/run/d
 alias go="nocorrect go"
 alias vim="nocorrect vim"
 alias tfplan="tf plan -out terraform.tfplan && tf show -json terraform.tfplan > tfplan.json"
-alias wandb-admin-password="kubectl get secret wandb-password -ojson | jq -r '.data.password' | base64 -d | pbcopy"
-
 
 # docker system prune -a
 
