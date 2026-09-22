@@ -57,10 +57,14 @@ plugins=(
     awshelper
     bundler
     colored-man-pages
+    gcloud
     git
     golang
     gpg-agent
+    helm
     history
+    kubectl
+    kubectx
     last-working-dir
     lein
     mwhooker
@@ -82,6 +86,8 @@ export GOPATH=$HOME/go
 export HOMEBREW=/opt/homebrew
 
 export PATH=/sbin:/usr/sbin:$GOPATH/bin:$HOMEBREW/bin:$PATH:$HOME/.rbenv/bin:$HOME/bin
+
+export PATH=$PATH:$HOME/.local/bin
 
 export HISTFILE=$HOME/.zhistory
 
